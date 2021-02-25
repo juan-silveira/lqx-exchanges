@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="image/icon.png">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="manifest" href="/manifest.json">
+  <title>LQX Cointrade</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- JAVASCRIPT -->
+  <script src="src/jquery.min.js"></script>
+  <script src="src/numeral.min.js"></script>
+</head>
+
+<body>
+
+  <div id="all">
+    <h1>LQX Exchanges</h1>
+
+    <div class="btn-group">
+      <a href="index.html"><button>CointradeCX</button></a>
+      <a href="bullgain.html"><button>Bullgain</button></a>
+      <a href="exccripto.html"><button>Exc Cripto</button></a>
+    </div>
+    <div id="price">
+      <h1>Preço do LQX (Exc Cripto)</h1>
+      <span id="price-show"></span>
+    </div>
+    <div id="sell">
+      <h1>Ordens de Venda</h1>
+      <table id="sell-table">
+        <tr>
+          <th class="table-title">Quantidade</th>
+          <th class="table-title">Preço Venda</th>
+          <th class="table-title">Valor Total</th>
+        </tr>
+      </table>
+    </div>
+    <div id="buy">
+      <h1>Ordens de Compra</h1>
+      <table id="buy-table">
+        <tr>
+          <th class="table-title">Quantidade</th>
+          <th class="table-title">Preço Compra</th>
+          <th class="table-title">Valor Total</th>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/8.2.9/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="/__/firebase/8.2.9/firebase-analytics.js"></script>
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+</body>
+
+<script src="src/codeexc.js"></script>
+
+</html>
