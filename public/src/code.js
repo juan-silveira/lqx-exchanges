@@ -79,6 +79,7 @@ function getLqxInfo(coinPair, operation, quantity) {
         if (counter > 10) break;
 
         var order = type == "buy" ? data[i] : data[(data.length - 1) - i];
+        var top = type == "sell" ? data[i] : data[(data.length - 1) - i];
         var quantity = Number(order.quantity);
         var value = Number(order.quantity) * Number(order.price);
         var price = Number(order.price);
@@ -92,9 +93,9 @@ function getLqxInfo(coinPair, operation, quantity) {
         `);
         counter++;
 
-        // Show top buying price
+        // Show top selling price
         if (type == "sell" && !priceFound) {
-          var topPrice = numeral(price).format('$0,0.000');
+          var topPrice = Intl.NumberFormat('pt-br', {style: 'currency', currency: 'BRL', minimumFractionDigits: 3}).format(top.price)
           $("#price-show").text(`${topPrice}`).css({ "color": "#8BC34A" });
           priceFound = true;
         }
