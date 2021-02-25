@@ -93,7 +93,7 @@ function getLqxInfo(coinPair, operation, quantity) {
         counter++;
 
         // Show top buying price
-        if (type == "buy" && !priceFound) {
+        if (type == "sell" && !priceFound) {
           var topPrice = numeral(price).format('$0,0.000');
           $("#price-show").text(`${topPrice}`).css({ "color": "#8BC34A" });
           priceFound = true;
