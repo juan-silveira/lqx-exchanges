@@ -95,7 +95,7 @@ function getLqxInfo(coinPair, operation, quantity) {
 
         // Show top selling price
         if (type == "sell" && !priceFound) {
-          var topPrice = Intl.NumberFormat('pt-br', {style: 'currency', currency: 'BRL', minimumFractionDigits: 3}).format(top.price)
+          var topPrice = Intl.NumberFormat('pt-br', {style: 'currency', currency: 'BRL', minimumFractionDigits: 3}).format(top.Rate)
           $("#price-show").text(`${topPrice}`).css({ "color": "#8BC34A" });
           priceFound = true;
         }
