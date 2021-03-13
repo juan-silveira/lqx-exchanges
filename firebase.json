@@ -2,7 +2,7 @@
   "hosting": {
     "public": "public",
     "headers": [ {
-        "source" : "**",
+        "source" : "https://api.pancakeswap.finance/api/v1/price",
         "headers" : [{
           "key" : "Access-Control-Allow-Origin",
           "value" : "*"
